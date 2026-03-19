@@ -2,43 +2,56 @@
 #include <stdlib.h>
 #include <time.h>
 
-int ex1();
+void ex1();
 
 int main(){
      ex1();
     return 0;
 }
 
-int ex1(){
+
+int* gerar_nums(){
+
     srand(time(NULL));
-    int v[15];
 
+    int* v = malloc(15 * sizeof(int));
+    
     for(int i = 0 ; i<15 ; i++){
-        v[i]=rand()%100;
+    v[i] = rand()%100;
     }
+    return v;
+}
 
-    int maior = v[0] , menor = v[0];
+void ex1(){
+
+    int* nums = gerar_nums();
+
+    int maior = nums[15] , menor = nums[15];
     for(int i = 1 ; i<15; i++){ 
-        if(v[i]>maior) maior = v[i]; 
-        if(v[i]<menor) menor = v[i]; 
+        if(nums[i]>maior) maior = nums[i]; 
+        if(nums[i]<menor) menor = nums[i]; 
     }
 
     for(int i = 0 ;i<15 ; i++){
-        printf("%d ",v[i]); 
+        printf("%d ",nums[i] , maior , menor); 
     }
 }
 
-void ex2(){}
+int ex2(){
 
-void ex3(){}
+    int* nums = gerar_nums();
+    free(nums);
+}
 
-void ex4(){}
+int ex3(){}
 
-void ex5(){}
+int ex4(){}
 
-void ex6(){}
+int ex5(){}
+
+int ex6(){}
 
 // trabalho
-void ex7(){}
+int ex7(){}
 
-void ex8(){}
+int ex8(){}
