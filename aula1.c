@@ -3,7 +3,11 @@
 #include <time.h>
 
 int main(){
+    ex1();
+    return 0;
+}
 
+void ex1(){
     srand(time(NULL));
     int v[15];
 
@@ -20,6 +24,4 @@ int main(){
     for(int i = 0 ;i<15 ; i++){
         printf("%d ",v[i]); 
     }
-
-    return 0;
 }
