@@ -2,12 +2,14 @@
 #include <stdlib.h>
 #include <time.h>
 
+int ex1();
+
 int main(){
-    ex1();
+     ex1();
     return 0;
 }
 
-void ex1(){
+int ex1(){
     srand(time(NULL));
     int v[15];
 
@@ -25,3 +27,18 @@ void ex1(){
         printf("%d ",v[i]); 
     }
 }
+
+void ex2(){}
+
+void ex3(){}
+
+void ex4(){}
+
+void ex5(){}
+
+void ex6(){}
+
+// trabalho
+void ex7(){}
+
+void ex8(){}
